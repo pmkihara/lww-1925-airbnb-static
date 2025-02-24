@@ -2,7 +2,7 @@ class FlatsController < ApplicationController
   # Cria uma constante para ser usada no método #set_flats
   FLATS_URL = 'https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json'.freeze
 
-  # Antes de executar qualquer action deste controller, rodar o método #set_flat
+  # Antes de executar qualquer action deste controller, rodar o método #set_flat para achar os flats
   before_action :set_flats
 
   def index; end

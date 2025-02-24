@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Flats</h1>
+  <ul class="list-group">
+    <% @flats.each do |flat| %>
+      <li class="list-group-item">
+        <h2><%= flat["name"] %></h2>
+        <p><%= flat["priceCurrency"]  %> $<%= flat["price"] %></p>
+        <p><%= link_to 'See details', flat_path(flat['id']) %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>

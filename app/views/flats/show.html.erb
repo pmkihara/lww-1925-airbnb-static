@@ -1,10 +1,12 @@
 <div class="container">
-  <div class="card mb-5">
-    <img src="<%= @flat["imageUrl"] %>" alt="<%= @flat["name"] %>" class="card-img-top">
-    <div class="card-body">
-      <h1 class="card-title"><%= @flat["name"] %></h1>
-      <h2 class="card-text">$<%= @flat["price"]  %></h2>
+  <%= link_to "Home", root_path, class: 'btn btn-primary' %>
+  <div class="row justify-content-center">
+    <div class="card mb-3 col-8">
+      <img src="<%= @flat["imageUrl"] %>" alt="<%= @flat["name"] %>" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title"><%= @flat["name"] %></h5>
+        <p class="card-text">$<%= @flat["price"]  %></p>
+      </div>
     </div>
   </div>
-  <%= link_to "Home", root_path, class: 'btn btn-primary' %>
 </div>

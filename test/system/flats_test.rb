@@ -12,4 +12,12 @@ class FlatsTest < ApplicationSystemTestCase
     assert_selector 'h2', text: 'Superbe vue à 2 min du Sacré Coeur'
     assert_selector 'h2', text: 'Bohemian and Chic in Paris'
   end
+
+  test 'visiting the show' do
+    visit '/flats/211'
+
+    assert_selector 'h5', text: 'Bohemian and Chic in Paris'
+    assert_selector 'p', text: '$90'
+    assert_selector 'a.btn.btn-primary', text: 'Home'
+  end
 end
